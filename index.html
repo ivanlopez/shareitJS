@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>shareIt.js</title>
+  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery.shareIt.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('#si_facebook').shareIt({ 
+                  share : "facebook",
+                  img : "http://jquery.com/jquery-wp-content/themes/jquery.com/i/try-jquery.png",
+                  title : "jQuery write less, do more.",
+                  description : "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.",
+                  link: "http://jquery.com/"});
+
+         $('#si_twitter').shareIt({ 
+                  share : "twitter",
+                  title : "jQuery write less, do more.",
+                  link : "http://jquery.com/"});
+
+         $('#si_pinterest').shareIt({
+                  share : "pinterest",
+                  img : "http://jquery.com/jquery-wp-content/themes/jquery.com/i/try-jquery.png",
+                  title : "jQuery write less, do more.",
+                  link : "http://jquery.com/"});
+    });
+  </script>
+
+</head>
+<body>
+
+  <h1>shareIt.js</h1>
+
+  <p>shareIt.js is a jQuery plugin that offers a quick and easy way to genreate share URL's for facebook, Twitter, and Pinterest. It uses minimal HTML markup as all that is required is an link tag.</p>
+
+  <h3>1. Markup</h3>
+  <p>The markup is a simple a creating link tags.</p>
+  <pre>
+    <a href="" id="facebook"> ... Link text/image ... </a>
+    <a href="" id="twitter"> ... Link text/image ... </a>
+    <a href="" id="pinterest"> ... Link text/image ... </a>
+  </pre>
+
+  <h3>2. JavaScript</h3>
+  <p>The markup is a simple a creating link tags.</p>
+  <pre>
+     $('#si_facebook').shareIt( 
+                  share : "facebook", // needs to be set to facebook, twitter, or pinterest
+                  img : "", // absolute image path
+                  title: "", // title of shared item
+                  description: "", // description of shared item
+                  link: "" // link to shared item
+                  );
+  </pre>
+
+  <p>Share this Plug-in</p>
+
+  <a href="" id="si_facebook"><img src="images/facebook.jpg" alt="facebook"></a>
+  <a href="" id="si_twitter"><img src="images/twitter.jpg" alt="twitter"></a>
+  <a href="" id="si_pinterest"><img src="images/pinterest.jpg" alt="pinterest"></a>
+
+</body>
+</html>
